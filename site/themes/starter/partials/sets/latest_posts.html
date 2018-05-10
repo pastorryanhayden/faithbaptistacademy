@@ -1,0 +1,96 @@
+{{if list_type == 1}}
+    <section class="latest-posts">
+        <div class="latest-posts-1">
+                <h2>{{heading}}</h2>
+                <ul>
+                    {{ collection from="blog" limit="8"}}
+                    {{if no_results}}
+                    <p style="text-align: center; grid-column-start: 1; grid-column-end: -1;">There are currently no blog posts to show.</p>
+                    {{else}}
+                    <li style="
+                    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url({{glide:hero_image width="360" height="400"}});
+                    background-size: cover, cover;
+                    ">
+                        <a href="{{url}}">
+                            <h3 class="title">{{title}}</h3>
+                            <p class="desc">{{sub_title}}</p>
+                            <p class="read-more">Read More ►</p>
+                        </a>
+                    </li>
+                    {{/if}}
+                    {{/collection}}
+                </ul>
+            </div>
+</section>
+{{elseif list_type == 2}}
+<hr>
+<section class="latest-posts">
+    <h2>{{heading}}</h2>
+        <div class="latest-posts-2">
+                <ul>
+                        {{ collection from="blog" limit="8"}}
+                        {{if no_results}}
+                        <p style="text-align: center; grid-column-start: 1; grid-column-end: -1;">There are currently no blog posts to show.</p>
+                        {{else}}
+                    <li>
+                        <a href="{{url}}" class="link">
+                            {{if hero_image}}
+                            <img src="{{glide:hero_image width="360" height="260"}}" alt="">
+                            {{else}}
+                            <img src="http://placehold.it/360x260" alt="">
+                            {{/if}}
+                            <div class="text">
+                                <p class="date">{{date}}</p>
+                                <h3>{{title}}</h3>
+                                <p class="desc">{{sub_title}}</p>
+                            </div>
+                            <div class="action">
+                                    {{if enable_comments}}
+                                <div class="comments">💬  <span class="disqus-comm ent-count" data-disqus-identifier="{{id}}">0</span> </div>
+                                {{/if}}
+                                <span class="go">↪</span>
+                            </div>
+                        </a>
+                    </li>
+                    {{/if}}
+                    {{/collection}}
+                </ul>
+            </div>
+
+</section>
+<!-- The testing-ddTaiK1H7V part of the URL needs to be changed to match the value in settings -> disqus -> site -->
+<script id="dsq-count-scr" src="//testing-ddTaiK1H7V.disqus.com/count.js" async></script>
+
+{{elseif list_type == 3}}
+<section class="latest-posts">
+        <h2>{{heading}}</h2>
+            <div class="latest-posts-3">
+                    <ul>
+                            {{ collection from="blog" limit="8"}}
+                            {{if no_results}}
+                            <p style="text-align: center; grid-column-start: 1; grid-column-end: -1;">There are currently no blog posts to show.</p>
+                            {{else}}
+                <li>
+                    <a href="{{url}}">
+                        <div class="info">
+                            <div class="tags">{{tags }}<span>{{title}}</span>{{/tags}}</div>
+                            <h3 class="title">{{title}}</h3>
+                            <p class="date">{{date}}</p>
+                        </div>
+                        {{ if author}}
+                        {{relate:author}}
+                        <div class="author">
+                            <img src="{{glide:member_thumbnail width="50" height="50"}}" alt="">
+                            <p class="name">{{title}}</p>
+                            <p class="position">{{position}}</p>
+                        </div>
+                        {{/relate:author}}
+                        {{/if}}
+                    </a>
+                </li>
+                {{/if}}
+                {{/collection}}
+            </ul>
+                </div>
+    </section>
+{{/if}}

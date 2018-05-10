@@ -1,0 +1,29 @@
+taxonomies: false
+hide: true
+title: Testimonial
+create_title: ""
+fields:
+  testimonial_name:
+    type: text
+    display: Testimonial Name
+  testimonial_description:
+    type: text
+    display: Testimonial Description
+  testimonial_text:
+    type: bard
+    display: Testimonial Text
+    spellcheck: true
+    allow_source: true
+    autoLink: false
+    target_blank: false
+    link_validation: false
+    force_plain_text: true
+    clean_pasted_html: false
+    restrict_assets: false
+  testimonial_thumbnail:
+    type: assets
+    display: Testimonial Thumbnail
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1

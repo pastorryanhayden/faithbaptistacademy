@@ -1,0 +1,38 @@
+taxonomies:
+  tags: true
+hide: true
+title: Team Member
+create_title: Team Member
+fields:
+  title:
+    type: text
+    display: Member Name
+  member_position:
+    type: text
+    display: Member Position
+  featured:
+    type: toggle
+  member_thumbnail:
+    type: assets
+    display: Member Thumbnail
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  member_bio:
+    type: bard
+    display: Member Bio
+    spellcheck: true
+    allow_source: true
+    autoLink: false
+    target_blank: false
+    link_validation: false
+    force_plain_text: true
+    clean_pasted_html: false
+    restrict_assets: false
+  member_email:
+    type: text
+    display: Member Email
+  member_phone:
+    type: text
+    display: Member Phone

@@ -1,0 +1,71 @@
+<style>
+    .hero-text-color {
+        color: {{hero_text_color}};
+    }
+    div.hero-1 .buttons-row a.hero-button, div.hero-2 .buttons-row a.hero-button {
+        color: {{hero_button_text}};
+        background-color: {{hero_button_background}};
+    }
+</style>
+{{partial:navigation}}
+    {{ if hero_type == "Two Column"}}
+        <div class="hero-1" style="
+    background: {{if background_image_overlay}} linear-gradient(
+        {{ if background_image_overlay_type == 'White'}}
+        rgba(255,255,255,{{overlay_opacity}}),
+        rgba(255,255,255,{{overlay_opacity}})
+        {{elseif background_image_overlay_type == 'Black'}}
+        rgba(0,0,0,{{overlay_opacity}}),
+        rgba(0,0,0,{{overlay_opacity}})
+        {{elseif background_image_overlay_type == 'Other'}}
+        rgba({{overlay_color}}, {{overlay_opacity}}),
+        rgba({{overlay_color}}, {{overlay_opacity}})
+        {{/if}}
+        ),{{/if}} url({{background_image}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    ">
+        <div class="hero-text">
+            <h1 class="hero-text-color">{{hero_heading}}</h1>
+            <p class="hero-text-color">{{hero_text}}</p>
+            <div class="buttons-row">
+                    {{buttons}}
+                    <a href="{{relate:button_link}}{{url}}{{/relate:button_link}}" class="button hero-button">{{button_text}}</a>
+                {{/buttons}}
+            </div>
+        </div>
+        <img src="{{glide :src="hero_image" width="500" height="600" fit="crop"}}" alt="" class="hero-image">
+    </div>
+    {{elseif hero_type == "One Column"}}
+    <div class="hero-2" style="
+    background: {{if background_image_overlay}} linear-gradient(
+        {{ if background_image_overlay_type == 'White'}}
+        rgba(255,255,255,{{overlay_opacity}}),
+        rgba(255,255,255,{{overlay_opacity}})
+        {{elseif background_image_overlay_type == 'Black'}}
+        rgba(0,0,0,{{overlay_opacity}}),
+        rgba(0,0,0,{{overlay_opacity}})
+        {{elseif background_image_overlay_type == 'Other'}}
+        rgba({{overlay_color}}, {{overlay_opacity}}),
+        rgba({{overlay_color}}, {{overlay_opacity}})
+        {{/if}}
+        ),{{/if}} url({{background_image}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    ">
+        <div class="hero-text">
+            <h1 class="hero-text-color">{{hero_heading}}</h1>
+            <p class="hero-text-color">{{hero_text}}</p>
+            <div class="buttons-row">
+                {{buttons}}
+                    <a href="{{relate:button_link}}{{url}}{{/relate:button_link}}" class="button hero-button">{{button_text}}</a>
+                {{/buttons}}
+            </div>
+        </div>
+    </div>
+    {{/if}}
+        {{ partial:moab }}
+
+

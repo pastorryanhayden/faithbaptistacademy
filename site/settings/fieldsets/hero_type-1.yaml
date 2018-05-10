@@ -1,0 +1,41 @@
+taxonomies:
+  tags: true
+title: Hero Type 1
+create_title: ""
+hide: true
+fields:
+  background_image:
+    type: assets
+    display: background-image
+    container: main
+    folder: img
+    restrict: true
+    max_files: -1
+  heading:
+    type: text
+    display: heading
+  text:
+    type: text
+    display: text
+  call_to_action_buttons:
+    type: replicator
+    display: Call to action buttons
+    sets:
+      set_1:
+        display: Button
+        fields:
+          button_text:
+            type: text
+            display: Button Text
+          button_link:
+            type: pages
+            display: Button Link
+            max_items: 1
+            mode: panes
+  image:
+    type: assets
+    display: Image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1

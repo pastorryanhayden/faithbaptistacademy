@@ -1,0 +1,39 @@
+<!--footer with multiple menus, hours, address with items progressively shown on larger devices -->
+<footer class="style-4">
+        <div class="top">
+            <div class="footer-menu">
+                <p>{{footer_menu_1_title}}</p>
+                <ul>
+                        {{ relate:footer_menu_1 }}
+                        <li><a href="{{url}}">{{ title }}</a></li>
+                    {{ /relate:footer_menu_1 }}
+                </ul>
+            </div>
+            <div class="footer-menu">
+                    <p>{{footer_menu_2_title}}</p>
+                    <ul>
+                            {{ relate:footer_menu_2 }}
+                            <li><a href="{{url}}">{{ title }}</a></li>
+                        {{ /relate:footer_menu_2 }}
+                    </ul>
+                </div>
+            <p class="address">
+                <span>{{first_text_section_title}}</span><br>
+                {{first_text_section}}
+            </p>
+            <p class="hours">
+                    <span>{{second_text_section_title}}</span><br>
+                    {{second_text_section}}
+            </p>
+            <div class="social-links">
+                <p>Follow Us</p>
+                <ul>
+                        {{partial src="footers/social"}}
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>&copy; {{copyright}}</p>
+
+        </div>
+</footer>

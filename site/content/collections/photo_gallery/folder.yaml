@@ -1,0 +1,4 @@
+title: Photo Gallery
+order: date
+fieldset: gallery
+template: gallery/single_gallery

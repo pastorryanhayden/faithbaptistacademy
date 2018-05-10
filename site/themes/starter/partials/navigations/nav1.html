@@ -1,0 +1,34 @@
+<nav class="navigation-bar-1 {{if navbar}} navbar {{/if}}">
+        <div class="left">
+            <a href="/" class="logo">
+                    {{if logo}}
+                    <img src="{{glide:logo width="150" height="35"}}" alt="">
+                    {{else}}
+                    {{site_name}}
+                    {{/if}}
+            </a>
+            <ul>
+                    {{ nav from="/" max_depth="2" menu_position:is="Left"}}
+                        <li><a href="{{url}}">{{title}}</a>
+                            {{if children }}
+                            <ul>{{ *recursive children* }}</ul>
+                            {{/if}}
+                        </li>
+                    {{/nav}}
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                    {{ nav from="/" max_depth="2" menu_position:is="Right"}}
+                    <li><a href="{{url}}">{{title}}</a>
+                        {{if children }}
+                        <ul>{{ *recursive children* }}</ul>
+                        {{/if}}
+                    </li>
+                {{/nav}}
+            </ul>
+            {{nav from="/" max_depth="2" menu_position:is="Call to Action"}}
+                <a href="{{url}}" class="cta-button">{{title}}</a>
+            {{/nav}}
+        </div>
+</nav>

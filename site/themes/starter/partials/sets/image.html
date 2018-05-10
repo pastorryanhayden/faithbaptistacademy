@@ -1,0 +1,18 @@
+<figure
+{{if position == "full"}}
+class="image-full"
+{{elseif position == "left"}}
+class="image-left"
+{{elseif position == "right"}}
+class="image-right"
+{{else}}
+class="image-full"
+{{/if}}
+>
+        <img src="{{image}}" alt="{{caption}}" />
+        <figcaption>
+            {{ if caption}}
+            <p>{{caption}}</p>
+            {{/if}}
+        </figcaption>
+  </figure>

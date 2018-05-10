@@ -1,0 +1,121 @@
+section.testimonials-1
+    padding: 75px
+    h2
+        font-size: 3em
+    .testimonial-slider
+        max-width: 100%
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+        grid-gap: 20px
+    .testimonial
+        padding: 30px
+        border: 1px solid $gray
+        height: 275px
+        align-self: center
+        justify-self: stretch
+        overflow: hidden
+        cursor: pointer
+        display: grid
+        grid-template-columns: 1fr
+        grid-column-gap: 15px
+        align-items: center
+        justify-items: center
+        text-align: center
+        img
+            width: 100px
+            border-radius: 50%
+        p
+            display: none
+        &.showing
+            grid-column: span 2
+            align-self: stretch
+            justify-self: stretch
+            min-width: 500px
+            height: 275px
+            grid-template-columns: 150px 1fr
+            align-items: center
+            justify-items: start
+            text-align: start
+            img
+                width: 150px
+            p
+                display: block
+section.testimonials-2
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+    grid-gap: 20px
+    background: $gray
+    background-size: cover
+    padding: 75px
+    justify-items: center
+    align-items: center
+    align-items: stretch
+    justify-items: stretch
+    color: $white
+    .testimonial
+        padding: 20px
+        background: rgba(255, 255, 255, 0.4)
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1)
+        display: grid
+        grid-template-columns: 150px 1fr
+        grid-gap: 25px
+        align-items: center
+        .testimonial__thumbnail
+            width: 150px
+            height: 150px
+        h2
+            font-size: 1.5em
+            margin-bottom: 0
+        p.testimonial__description
+            margin-top: .5em
+            font-style: italic
+        p.testimonial__text
+section.testimonials-3
+    padding: 50px
+    text-align: center
+    +tablet
+        padding: 75px
+    h2
+        margin-bottom: 1.5em
+    .slider
+        width: 100%
+    .testimonial
+        max-width: 560px
+        margin-left: auto
+        margin-right: auto
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        opacity: 0
+        transition: opacity 1s
+        display: none
+    .attrib
+        width: inherit
+        text-align: left
+        display: flex
+        align-items: center
+        img
+            margin-right: 1em
+            width: 50px
+            height: 50px
+            border-radius: 50%
+
+        p + p
+            text-indent: 0
+        p.person
+            font-weight: 700
+            font-family: $main-font
+        p.description
+            text-indent: 0
+            font-style: italic
+            margin-bottom: 0
+    .showing
+        opacity: 1
+        display: flex
+
+
+
+
+
+

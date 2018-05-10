@@ -1,0 +1,11 @@
+{{blocks}}
+    {{if type=="text_content"}}
+    {{text_content}}
+    <section class="text-content">
+        {{ partial src="sets/{type}" }}
+    </section>
+    {{/text_content}}
+    {{else}}
+        {{ partial src="sets/{type}" }}
+    {{/if}}
+{{/blocks}}

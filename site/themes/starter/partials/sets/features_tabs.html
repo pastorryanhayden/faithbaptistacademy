@@ -1,0 +1,68 @@
+<section class="features-tabs">
+        {{features_items}}
+        <div class="feature-area" id="{{main_heading | slugify}}">
+            <div class="feature-text">
+                <h2>{{main_heading}}</h2>
+                {{main_text}}
+            </div>
+            <div class="feature-image">
+                <img src="{{glide:main_image width="300" height="300" fit="crop"}}" alt="">
+            </div>
+        </div>
+        {{/features_items}}
+
+        <div class="feature-tabs-tabs">
+                {{features_items}}
+            <div class="tab1 tab">
+                <a href="#{{main_heading | slugify}}">
+                    <h3>{{tab_heading}}</h3>
+                    <p>{{tab_text}}</p>
+                </a>
+            </div>
+            {{/features_items}}
+        </div>
+    </section>
+    <script type="text/javascript">
+            //get everything with the class of tab inside of feature-tabs-tabs and assign it to the variable myTabs
+            var myTabs = document.querySelectorAll("div.feature-tabs-tabs div.tab");
+            var myContentPanes = document.querySelectorAll(".feature-area");
+            //Add active class to first tab only
+            myTabs[0].classList.add('active');
+            myContentPanes[0].classList.add('active');
+
+
+            function myTabClicks(tabClickEvent) {
+                for (var i = 0; i < myTabs.length; i++) {
+                    myTabs[i].classList.remove("active");
+                }
+                var clickedTab = tabClickEvent.currentTarget;
+
+                clickedTab.classList.add("active");
+
+                tabClickEvent.preventDefault();
+
+                //remove the active class from each content pane
+
+                for(i = 0; i < myContentPanes.length; i++){
+                    myContentPanes[i].classList.remove('active');
+                }
+
+                // Get the clicked on tab and set it as AnchorReference
+                var anchorReference = tabClickEvent.currentTarget;
+
+                // Get the target of anchor in the clicked on tab and set it as activePaneID
+                var activePaneId = anchorReference.firstElementChild.getAttribute("href");
+                console.log(activePaneId);
+                // Set activepane to whatever has the id of the target of the clicked on tab
+                var activePane = document.querySelector(activePaneId);
+
+                // On the pane that is refererred by the clicked on tab, add the class of active.
+                activePane.classList.add('active');
+
+            }
+
+            //listen for tab clicks and run the myTabClicks function
+            for (i = 0; i < myTabs.length; i++) {
+                myTabs[i].addEventListener("click", myTabClicks)
+            }
+    </script>

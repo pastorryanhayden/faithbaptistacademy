@@ -1,0 +1,24 @@
+<!-- A clean white footer with an address and opening hours, and a right aligned menu -->
+<footer class="style-3">
+        <div class="top">
+            <p class="address">
+                    <span>{{first_text_section_title}}</span><br>
+                    {{first_text_section}}
+            </p>
+            <p class="hours">
+                    <span>{{second_text_section_title}}</span><br>
+                {{second_text_section}}
+            </p>
+            <ul class="footer-menu">
+                    {{ relate:footer_menu_1 }}
+                    <li><a href="{{url}}">{{ title }}</a></li>
+                {{ /relate:footer_menu_1 }}
+            </ul>
+        </div>
+        <div class="bottom">
+            <p>&copy; {{copyright}}</p>
+            <ul class="social">
+            {{partial src="footers/social"}}
+            </ul>
+        </div>
+    </footer>

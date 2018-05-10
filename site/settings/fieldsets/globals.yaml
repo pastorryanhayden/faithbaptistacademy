@@ -1,0 +1,172 @@
+title: Default Globals
+hide: true
+taxonomies:
+  tags: true
+fields:
+  general:
+    type: section
+    display: general
+  site_name:
+    type: text
+    display: Website Name
+    instructions: The name of your website
+    localizable: true
+  navigation_and_logo:
+    type: section
+    display: Navigation and Logo
+  logo:
+    type: assets
+    display: logo
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  navigation_style:
+    type: radio
+    display: Navigation Style
+    options:
+      - 1
+      - 2
+      - 3
+    default: 1
+  social_links:
+    type: section
+    display: Social Links
+  facebook:
+    type: text
+  twitter:
+    type: text
+  instagram:
+    type: text
+  linkedin:
+    type: text
+  youtube:
+    type: text
+  footer_1:
+    type: section
+    display: Footer
+    instructions: |
+      Footer style 1 looks like this -
+      <br>
+      <br>
+      ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-07%20at%2011.57.52%20AM.png)
+    show_when:
+      footer_style: 1
+  footer_2:
+    type: section
+    display: Footer
+    instructions: |
+      Footer style 2 looks like this -
+      <br>
+      <br>
+      ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-07%20at%2011.59.35%20AM.png)
+    show_when:
+      footer_style: 2
+  footer_3:
+    type: section
+    display: Footer
+    instructions: |
+      Footer style 3 looks like this -
+      <br>
+      <br>
+      ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-07%20at%2012.00.49%20PM.png)
+    show_when:
+      footer_style: 3
+  footer_4:
+    type: section
+    display: Footer
+    instructions: |
+      Footer style 4 looks like this -
+      <br>
+      <br>
+      ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-07%20at%2012.02.49%20PM.png)
+    show_when:
+      footer_style: 4
+  footer_style:
+    type: radio
+    display: Footer Style
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    default: 1
+  first_text_section_title:
+    display: Title for first text section (i.e. Get in Touch)
+    type: text
+    show_when:
+      footer_style:
+        - 3
+        - 4
+  first_text_section:
+    type: textarea
+    display: Text for first text section (i.e. Get in Touch)
+    instructions: Seperate new lines with `<br>`
+    show_when:
+      footer_style:
+        - 3
+        - 4
+  second_text_section_title:
+    display: Title for second text section (i.e. Opening Hours)
+    type: text
+    show_when:
+      footer_style:
+        - 3
+        - 4
+  second_text_section:
+    type: textarea
+    display: Text for second text section (i.e. Opening Hours)
+    instructions: Seperate new lines with `<br>`
+    show_when:
+      footer_style:
+        - 3
+        - 4
+  footer_menu_1_title:
+    type: text
+    display: Title for first footer menu
+    show_when:
+      footer_style: 4
+  footer_menu_1:
+    type: pages
+    display: What pages do you want in the footer menu?
+  footer_menu_2_title:
+    type: text
+    display: Title for second footer menu
+    show_when:
+      footer_style: 4
+  footer_menu_2:
+    type: pages
+    display: What pages do you want in the secondary footer menu?
+    show_when:
+      footer_style: 4
+  copyright:
+    type: text
+    display: copyright message
+  blog_section:
+    type: section
+    display: Blog Settings
+  blog_title:
+    display: Blog Title
+    type: text
+    default: Our Blog
+  blog_subtitle:
+    display: Blog Subtitle
+    type: text
+    default: Articles and Updates from Our Staff
+  show_featured_posts:
+    type: toggle
+    default: true
+    display: Show Featured Posts
+  paginate_number:
+    type: text
+    display: paginate_number
+    default: 6
+  default_page_image:
+    type: assets
+    display: Default Page Image (for when no featured image is provided.)
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+
+

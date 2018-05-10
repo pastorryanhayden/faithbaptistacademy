@@ -1,0 +1,11 @@
+<section class="features-4">
+    {{features_items}}
+    <div class="feature">
+        {{if image}}
+        <img src="{{glide:image width="60" height="60" fit="crop"}}" alt="{{heading}}">
+        {{/if}}
+        <h3>{{heading}}</h3>
+        {{feature_text}}
+    </div>
+    {{/features_items}}
+</section>

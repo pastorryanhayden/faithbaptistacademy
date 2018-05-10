@@ -1,0 +1,23 @@
+{{partial src="footers/footer{footer_style}"}}
+
+<!-- <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}" type="text/javascript"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.js"></script>
+<script src="{{ theme:js }}"></script>
+<script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70,
+      'side': 'right',
+      'touch': false
+    });
+    document.querySelector('.trigger').addEventListener('click', function() {
+        slideout.toggle();
+      });
+  {{ if navigation_style == 3 }}
+    document.querySelector('.trigger2').addEventListener('click', function() {
+        slideout.toggle();
+      });
+  {{/if}}
+</script>

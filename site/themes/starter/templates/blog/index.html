@@ -1,0 +1,102 @@
+{{partial:navigation navbar="true"}}
+<div class="blog-list-header">
+    <h1>{{blog_title}}</h1>
+    <p>{{blog_subtitle}}</p>
+</div>
+<div class="blog-list-content">
+    {{if show_featured_posts}}
+    {{if {collection:count in="blog" feature:is="true"} > 0}}  {{#   Only show this section if featured posts exist#}}
+    {{if {get:page} == 1 || {get:page} == null  }} {{#  Hide the featured posts after the first page#}}
+    <div class="posts-divider">
+        <h2>Featured Posts</h2>
+        <hr>
+    </div>
+
+    <ul class="featured_posts">
+    {{collection:blog feature:is="true" limit="2"}}
+        <li>
+            <a href="{{url}}">
+                <img src="{{glide:hero_image width="583" height="327" fit="cover"}}" alt="{{title}}">
+                <h3>{{title}}</h3>
+                <p class="subtitle">{{sub_title}}</p>
+                {{ if author}}
+                <div class="meta">
+                    {{relate:author}}
+                    <img src="{{glide:member_thumbnail width="50" height="50"}}" alt="">
+                    <div class="info">
+                        <p class="author">{{title}}</p>
+                        <p class="date">{{date}}</p>
+                    </div>
+                    {{/relate:author}}
+                </div>
+                {{else}}
+                <div class="meta">
+                        <div class="info">
+                            <p class="date">{{date}}</p>
+                        </div>
+                    </div>
+                {{/if}}
+            </a>
+        </li>
+    {{/collection:blog }}
+    </ul>
+        {{/if}}
+    {{/if}}
+    {{/if}}
+    <div class="posts-divider">
+            <h2>Recent Posts</h2>
+            <hr>
+    </div>
+
+
+    {{collection:blog limit="{paginate_number}" paginate="true" as="posts"}}
+    {{ if no_results }}
+        <p>Aww, there are no results.</p>
+
+    {{ /if }}
+    <ul class="recent-posts">
+    {{ posts }}
+        <li>
+            <a href="{{url}}">
+                <img src="{{glide:hero_image width="583" height="327" fit="cover"}}" alt="{{title}}">
+                <h3>{{title}}</h3>
+                <p class="subtitle">{{sub_title}}</p>
+                {{ if author}}
+                <div class="meta">
+                    {{relate:author}}
+                    <img src="{{glide:member_thumbnail width="50" height="50"}}" alt="">
+                    <div class="info">
+                        <p class="author">{{title}}</p>
+                        <p class="date">{{date}}</p>
+                    </div>
+                    {{/relate:author}}
+                </div>
+                {{else}}
+                <div class="meta">
+                        <div class="info">
+                            <p class="date">{{date}}</p>
+                        </div>
+                    </div>
+                {{/if}}
+            </a>
+        </li>
+    {{/posts}}
+    </ul>
+
+    {{ paginate }}
+    {{ if total_pages > 1}}
+    <div class="paginate">
+        <a href="{{ prev_page }}">⬅ Previous</a>
+
+        {{ current_page }} of {{ total_pages }}
+
+        <a href="{{ next_page }}">Next ➡</a>
+    </div>
+    {{/if}}
+    {{ /paginate }}
+
+    {{/collection:blog }}
+
+
+</div><!--blog-list-content-->
+

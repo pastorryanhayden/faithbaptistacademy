@@ -1,0 +1,587 @@
+taxonomies:
+  tags: true
+hide: true
+title: Mother of All Bard Fields
+fields:
+  blocks:
+    type: replicator
+    display: blocks
+    sets:
+      text_content:
+        display: Text Content
+        fields:
+          text_content:
+            type: bard
+            display: Text
+            buttons:
+              - bold
+              - italic
+              - anchor
+              - h2
+              - h3
+              - h4
+            spellcheck: true
+            allow_source: true
+            autoLink: false
+            target_blank: false
+            link_validation: false
+            force_plain_text: true
+            clean_pasted_html: false
+            sets:
+              awesome_numbered_list:
+                display: Awesome Numbered List
+                fields:
+                  list_item:
+                    type: replicator
+                    display: list_item
+                    sets:
+                      set_1:
+                        display: list_item_item
+                        fields:
+                          number:
+                            type: text
+                            display: Number
+                            instructions: Put a number here (or a single digit).
+                          item_title:
+                            type: text
+                            display: item_title
+                          item_text:
+                            type: textarea
+                            display: item_text
+              pull_quote:
+                display: Pull Quote
+                instructions: Pull quotes are quotes from your text that are displayed in the margins.
+                fields:
+                  quote:
+                    type: markdown
+                    display: quote
+                    cheatsheet: true
+                    restrict_assets: false
+              block_quote:
+                display: Block Quote
+                instructions: Block Quotes are quotes shown in your text with an attribution.
+                fields:
+                  quote:
+                    type: markdown
+                    display: quote
+                    cheatsheet: true
+                    restrict_assets: false
+                  attribution:
+                    type: text
+                    display: Attribution
+                    instructions: i.e. Sherlock Holmes, The Sign of Four
+              dl:
+                display: Definition List
+                fields:
+                  list_type:
+                    type: radio
+                    display: List Type
+                    options:
+                      1: Default
+                      2: Inline
+                      3: Dictionary Style
+                    inline: false
+                  definition_list_item:
+                    type: replicator
+                    display: Definition list item
+                    sets:
+                      dt_dl:
+                        display: dt_dl
+                        fields:
+                          definition_list_title:
+                            type: text
+                            display: Definition List Title
+                          definition_list_text:
+                            type: text
+                            display: Definition List Text
+              audio:
+                display: Audio
+                fields:
+                  caption:
+                    type: text
+                    display: caption
+                  mp3:
+                    type: assets
+                    display: mp3
+                    container: main
+                    folder: img
+                    restrict: true
+                    max_files: 1
+              image:
+                display: Image
+                fields:
+                  position:
+                    type: radio
+                    display: Position
+                    options:
+                      full: full
+                      left: left
+                      right: right
+                    inline: true
+                  image:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: img
+                    restrict: true
+                    max_files: 1
+                  caption:
+                    type: text
+                    display: Caption
+              video:
+                display: Video
+                fields:
+                  video:
+                    type: video
+                    display: video
+            restrict_assets: false
+      content_type_1:
+        display: Content 1
+        fields:
+          dark:
+            type: toggle
+            display: Dark Background?
+            instructions: Check this to make the background dark and the text light.
+          heading:
+            type: text
+            display: Heading
+          contents_content:
+            type: bard
+            display: Content
+            buttons:
+              - bold
+              - italic
+              - anchor
+          image:
+            type: assets
+            display: Image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+        instructions: |
+          A simple featured content section with an optional small image.
+          <br>
+          <br>
+          ![Content Image One](http://sitesforchurch.s3.amazonaws.com/Contents%20%231-1.png)
+      content_type_2:
+        display: Content 2
+        instructions: |
+          Alternating large centered images and text.
+          <br>
+          <br>
+          ![Content Image One](http://sitesforchurch.s3.amazonaws.com/Contents%20%232.png)
+        fields:
+          heading:
+            type: text
+            display: Heading
+          contents_content:
+            type: bard
+            display: Content
+            buttons:
+              - bold
+              - italic
+              - anchor
+          image:
+            type: assets
+            display: Image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+      content_type_3:
+        display: Content 3
+        instructions: |
+          Alternating half image half text.
+          <br>
+          <br>
+          ![Content Image One](http://sitesforchurch.s3.amazonaws.com/Contents%20%233.png)
+        fields:
+          heading:
+            type: text
+            display: Heading
+          contents_content:
+            type: bard
+            display: Content
+            buttons:
+              - bold
+              - italic
+              - anchor
+          image:
+            type: assets
+            display: Image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+      content_type_4:
+        display: Content 4
+        instructions: |
+          Text block off center on a large background
+          <br>
+          <br>
+          ![Content Image One](http://sitesforchurch.s3.amazonaws.com/Contents%20%234.png)
+        fields:
+          heading:
+            type: text
+            display: Heading
+          contents_content:
+            type: bard
+            display: Content
+            buttons:
+              - bold
+              - italic
+              - anchor
+          background_image:
+            type: assets
+            display: Background Image
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+      features_type_1:
+        display: Grid 1
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2011.40.54%20AM.png)'
+        fields:
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+      features_type_2:
+        display: Grid 2
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2011.45.19%20AM.png)'
+        fields:
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+      features_type_3:
+        display: Grid 3
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2011.45.26%20AM.png)'
+        fields:
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+      features_type_4:
+        display: Features 1
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2011.46.51%20AM.png)'
+        fields:
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                  image:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: img
+                    restrict: true
+                    max_files: 1
+      features_type_5:
+        display: Features 2
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2011.53.56%20AM.png)'
+        fields:
+          headline:
+            type: text
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+      features_type_7:
+        display: Features 3
+        fields:
+          headline:
+            type: text
+          icon:
+            type: assets
+            display: icon
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+                  feature_text:
+                    type: bard
+                    display: feature text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+      features_type_8:
+        display: Features 5
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%203.40.51%20PM.png)'
+        fields:
+          headline:
+            type: text
+          headline_paragraph:
+            type: bard
+            display: Paragraph under headline
+            buttons:
+              - bold
+              - italic
+              - anchor
+          icon:
+            type: assets
+            display: icon
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+          button_text:
+            type: text
+            display: Button Text
+          link:
+            type: pages
+            display: Button Link
+            max_items: 1
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  heading:
+                    type: text
+                    display: heading
+      features_tabs:
+        display: Features Tabs
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%203.46.59%20PM.png)'
+        fields:
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  main_heading:
+                    type: text
+                    display: Main Heading
+                  main_text:
+                    type: bard
+                    display: Main Text
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                  main_image:
+                    type: assets
+                    display: Main Image
+                    max_files: 1
+                    container: main
+                    folder: img
+                    restrict: true
+                  tab_heading:
+                    type: text
+                    display: Tab Heading
+                  tab_text:
+                    type: text
+                    display: Tab Text
+      faq1:
+        display: FAQ 1
+        instructions: '![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-03%20at%2012.02.13%20PM.png)'
+        fields:
+          headline:
+            type: text
+          icon:
+            type: assets
+            display: icon
+            container: main
+            folder: img
+            restrict: true
+            max_files: 1
+          features_items:
+            type: replicator
+            display: features
+            sets:
+              features_item_item:
+                display: Item
+                fields:
+                  feature_question:
+                    type: text
+                    display: Question
+                  feature_answer:
+                    type: text
+                    display: Answer
+      teams:
+        display: Teams
+        fields:
+          style:
+            type: select
+            display: Choose a style
+            options:
+              1: 1
+              2: 2
+            default: 1
+          sort_by:
+            type: select
+            display: Sort By
+            options:
+              Default: Default
+              Date: Date
+            default: Default
+          limit_items:
+            type: text
+            display: How many team members to show?
+            mode: number
+            default: 4
+      signup_1:
+        display: Signup 1
+        fields:
+          heading:
+            type: text
+            display: Heading
+          text:
+            type: bard
+            display: Text
+            buttons:
+              - bold
+              - italic
+              - anchor
+          image:
+            type: assets
+            max_files: 1
+            restrict: true
+            container: main
+            folder: img
+      signup_2:
+        display: Signup 2
+        fields:
+          heading:
+            type: text
+            display: Heading
+      signup_3:
+        display: Signup 3
+        fields:
+          heading:
+            type: text
+            display: Heading
+          text:
+            type: bard
+            display: Text
+            buttons:
+              - bold
+              - italic
+              - anchor
+      signup_4:
+        display: Signup 4
+        fields:
+          heading:
+            type: text
+            display: Heading
+          text:
+            type: bard
+            display: Text
+            buttons:
+              - bold
+              - italic
+              - anchor
+          background_image:
+            type: assets
+            max_files: 1
+            restrict: true
+            container: main
+            folder: img
+      latest_posts:
+        display: Latest Posts
+        fields:
+          heading:
+            display: Heading
+            type: text
+          list_type:
+            display: List Type
+            type: radio
+            options:
+              - 1
+              - 2
+              - 3
+            default: 2
+      gallery:
+        display: Gallery
+        fields:
+          heading:
+            display: Heading
+            type: text
+          list_type:
+            display: List Type
+            type: radio
+            instructions: More options coming.
+            options:
+              - 1
+            default: 1

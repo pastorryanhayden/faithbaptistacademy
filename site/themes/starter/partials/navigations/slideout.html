@@ -1,0 +1,28 @@
+<nav id="menu">
+        <div class="left">
+            <a href="#" class="logo"><img src="http://placehold.it/128x34?text-logo" alt=""></a>
+            <ul>
+                    {{ nav from="/" max_depth="2" menu_position:is="Left"}}
+                    <li><a href="{{url}}">{{title}}</a>
+                        {{if children }}
+                        <ul>{{ *recursive children* }}</ul>
+                        {{/if}}
+                    </li>
+                {{/nav}}
+            </ul>
+        </div>
+        <div class="right">
+            <ul>
+                    {{ nav from="/" max_depth="2" menu_position:is="Right"}}
+                    <li><a href="{{url}}">{{title}}</a>
+                        {{if children }}
+                        <ul>{{ *recursive children* }}</ul>
+                        {{/if}}
+                    </li>
+                {{/nav}}
+            </ul>
+            {{nav from="/" max_depth="2" menu_position:is="Call to Action"}}
+                <a href="{{url}}" class="cta-button">{{title}}</a>
+            {{/nav}}
+        </div>
+    </nav>
