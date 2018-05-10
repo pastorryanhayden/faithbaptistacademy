@@ -1,6 +1,7 @@
 ---
+show_sidebar: false
 menu_position: Left
-title: Blog
+title: Updates
 nav_title: Blog
 mount: blog
 template: blog/index

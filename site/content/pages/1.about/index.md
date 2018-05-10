@@ -1,6 +1,7 @@
 ---
-title: About Me
+title: About
 menu_position: Left
+in_footer: false
 fun_facts:
   - I grew up in West Virginia but moved to California in the mid 90s
   - My life is about as organized as the $5 DVD bin at Wal-Mart
