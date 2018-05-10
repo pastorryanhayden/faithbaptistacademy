@@ -1,0 +1,80 @@
+{{partial:navigation navbar="true"}}
+<section class="page-header" style="
+{{if featurd_image }}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url({{glide:featurd_image width="1440" height="600"}});
+{{elseif default_page_image}}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url({{glide:default_page_image width="1440" height="600"}});
+{{else}}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url(http://source.unsplash.com/random/1440x600);
+{{/if}}
+background-size: cover, cover;
+background-position: center, center, center, center;
+
+">
+<div class="content">
+    <h1 class="page-title">{{title}}</h1>
+    <ol class="breadcrumb">
+        {{ nav:breadcrumbs }}
+        <li{{ if is_current }} class="current"{{ /if }}>
+            <a href="{{ url }}">{{ title }}</a>
+        </li>
+        {{ /nav:breadcrumbs }}
+    </ol>
+</div>
+</section>
+{{ if team_style == 1}}
+<section class="team-1">
+    <ul>
+        {{collection:team_members sort="featured:desc"}}
+        <li>
+                <img src="{{glide:member_thumbnail width="360" height="260" fit="crop"}}" alt="{{title}}">
+                <div class="text">
+                    <p class="name">{{title}}</p>
+                    <p class="position">{{member_position}}</p>
+                    <div class="description">
+                            {{member_bio}}
+                    </div>
+                    {{if member_phone || member_email}}
+                    <div class="contact">
+                        {{if member_email}}
+                        <span class="email">{{member_email}}</span>
+                        {{/if}}
+                        {{if member_phone}}
+                        <span class="phone">{{member_phone}}</span>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                </div>
+            </li>
+        {{/collection:team_members}}
+    </ul>
+
+</section>
+{{elseif team_style == 2}}
+<section class="team-2">
+        <ul>
+                {{collection:team_members sort="featured:desc"}}
+                <li>
+                        <img src="{{glide:member_thumbnail width="360" height="400" fit="crop"}}" alt="">
+                        <div class="text">
+                            <p class="name">{{title}}</p>
+                            <p class="position">{{member_position}}</p>
+                            <div class="description">
+                                    {{member_bio}}
+                            </div>
+                            {{if member_phone || member_email}}
+                                <div class="contact">
+                                    {{if member_email}}
+                                    <span class="email">{{member_email}}</span>
+                                    {{/if}}
+                                    {{if member_phone}}
+                                    <span class="phone">{{member_phone}}</span>
+                                    {{/if}}
+                                </div>
+                            {{/if}}
+                        </div>
+                    </li>
+                {{/collection:team_members}}
+        </ul>
+    </section>
+{{/if}}

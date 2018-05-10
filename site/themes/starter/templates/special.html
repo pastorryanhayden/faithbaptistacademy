@@ -1,0 +1,28 @@
+{{partial:navigation navbar="true"}}
+<section class="page-header" style="
+{{if featurd_image }}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url({{glide:featurd_image width="1440" height="600"}});
+{{elseif default_page_image}}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url({{glide:default_page_image width="1440" height="600"}});
+{{else}}
+background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,.2)), url(http://source.unsplash.com/random/1440x600);
+{{/if}}
+background-size: cover, cover;
+background-position: center, center, center, center;
+
+">
+<div class="content">
+    <h1 class="page-title">{{title}}</h1>
+    <ol class="breadcrumb">
+        {{ nav:breadcrumbs }}
+        <li{{ if is_current }} class="current"{{ /if }}>
+            <a href="{{ url }}">{{ title }}</a>
+        </li>
+        {{ /nav:breadcrumbs }}
+    </ol>
+</div>
+</section>
+
+{{ partial:moab }}
+
+

@@ -9,7 +9,7 @@ blocks:
 menu_position: Call to Action
 title: Get Help
 fieldset: special
-template: home
+template: special
 id: ce02554f-80d4-4f42-9a0e-08fe4971fe21
 ---
 Stuff Here

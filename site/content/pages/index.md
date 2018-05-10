@@ -37,7 +37,7 @@ blocks:
     image: /assets/img/IMG_2683.JPG
 title: Home
 template: home
-fieldset: special
+fieldset: home
 list:
   - of
   - things

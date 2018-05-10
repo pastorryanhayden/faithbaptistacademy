@@ -1,0 +1,18 @@
+title: Other
+fields:
+  featured_image:
+    type: assets
+    display: Featured Image
+    folder: img
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  menu_position:
+    display: Menu Position
+    type: radio
+    options:
+      - Left
+      - Right
+      - Call to Action
+    default: Left

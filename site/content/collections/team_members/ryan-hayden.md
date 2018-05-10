@@ -1,6 +1,6 @@
 title: Ryan Hayden
 member_position: Developer
-featured: false
+featured: true
 member_thumbnail: /assets/img/profile-pic.JPG
 member_bio: '<p>Ryan is a pastor and the founder of Row &amp; Table, a company that makes web apps and websites for businesses and churches.</p>'
 member_email: ryan@rowandtable.com
