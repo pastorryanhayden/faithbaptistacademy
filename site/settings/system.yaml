@@ -4,7 +4,7 @@ locales:
     full: en_US
     name: English
     url: http://starter-kit.test/
-license_key: ""
+license_key: 'eb5f406b-ac94-4624-9c81-11bab10b77f1	'
 timezone: UTC
 date_format: F jS, Y
 default_extension: md

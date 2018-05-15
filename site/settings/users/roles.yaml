@@ -2,3 +2,46 @@ d32e14fb-08c9-44c2-aaf8-21200852bafd:
   title: Admin
   permissions:
     - super
+bee93d5d-ce75-445c-996b-9e2d2c53301c:
+  title: Editor
+  slug: editor
+  permissions:
+    - cp:access
+    - content:view_drafts_on_frontend
+    - resolve_duplicates
+    - pages:view
+    - pages:edit
+    - pages:create
+    - pages:delete
+    - pages:reorder
+    - collections:blog:view
+    - collections:blog:edit
+    - collections:blog:create
+    - collections:blog:delete
+    - collections:photo_gallery:view
+    - collections:photo_gallery:edit
+    - collections:photo_gallery:create
+    - collections:photo_gallery:delete
+    - collections:team_members:view
+    - collections:team_members:edit
+    - collections:team_members:create
+    - collections:team_members:delete
+    - collections:testimonials:view
+    - collections:testimonials:edit
+    - collections:testimonials:create
+    - collections:testimonials:delete
+    - taxonomies:tags:view
+    - taxonomies:tags:edit
+    - taxonomies:tags:create
+    - taxonomies:tags:delete
+    - globals:global:view
+    - globals:global:edit
+    - assets:main:view
+    - assets:main:edit
+    - assets:main:create
+    - assets:main:delete
+    - forms
+    - users:view
+    - users:edit
+    - users:create
+    - users:delete
