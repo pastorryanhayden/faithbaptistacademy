@@ -2,7 +2,7 @@
 template: home
 show_hero_section: true
 hero_type: One Column
-background_image: /assets/img/hero.jpg
+background_image: /assets/img/christian_perspective.JPG
 hero_heading: 'Grow in Knowledge<br>Grow in Christ'
 hero_text: >
   At Faith Baptist Academy in Cloverdale, Indiana we help families provide a safe, sound and
@@ -16,7 +16,7 @@ customize_hero: true
 hero_text_color: '#ffffff'
 background_image_overlay: true
 background_image_overlay_type: Black
-overlay_opacity: "0.2"
+overlay_opacity: "0.75"
 customize_buttons: true
 hero_button_background: '#1F8B49'
 hero_button_text: white
