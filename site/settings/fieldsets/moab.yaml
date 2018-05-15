@@ -585,3 +585,18 @@ fields:
             options:
               - 1
             default: 1
+      testimonials:
+        display: testimonials
+        fields:
+          heading:
+            display: Heading
+            type: text
+          list_type:
+            display: List Type
+            type: radio
+            instructions: More options coming.
+            options:
+              - 1
+              - 2
+              - 3
+            default: 3

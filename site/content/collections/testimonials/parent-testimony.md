@@ -1,0 +1,3 @@
+title: Parent Testimony
+testimonial_text: '<p>“Faith Baptist Academy has been wonderful for our boys! At first, we were nervous about putting our younger one in due to his age and just being concerned about him staying focused all day, but he has done so well and absolutely loves it! Both of our children have shown such growth since the start of the school year. Their teacher is very attentive and does a fantastic job of making every child feel valued and appreciated while also teaching them manners and respect. We are so thankful for the Academy and all of the wonderful staff there!”<br></p>'
+id: da26b954-8e03-4266-aa53-3dfe40317033

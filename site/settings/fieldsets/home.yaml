@@ -1,0 +1,149 @@
+taxonomies:
+  tags: true
+title: Home Page
+template: home
+hide: true
+fields:
+  content_section:
+    type: section
+    display: Main Content
+  moab:
+    type: partial
+    fieldset: moab
+  hero_section:
+    type: section
+    display: Hero (Top of Page) Settings
+  show_hero_section:
+    type: toggle
+    display: Show Hero Section
+    instructions: |
+      There is a lot here, so it's helpful to be able to hide it.
+  hero_type:
+    type: radio
+    display: Hero Type
+    options:
+      Two Column: Two Column
+      One Column: One Column
+    inline: true
+    show_when:
+      show_hero_section: true
+  background_image:
+    type: assets
+    display: Hero Background Image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+    show_when:
+      show_hero_section: true
+  hero_heading:
+    type: text
+    display: Hero Heading
+    show_when:
+      show_hero_section: true
+  hero_text:
+    type: text
+    display: Hero Text
+    show_when:
+      show_hero_section: true
+  buttons:
+    type: replicator
+    display: Buttons
+    show_when:
+      show_hero_section: true
+    sets:
+      set_1:
+        display: Button
+        fields:
+          button_text:
+            type: text
+            display: Button Text
+          button_link:
+            type: pages
+            display: Button Link
+            max_items: 1
+            mode: panes
+  hero_image:
+    type: assets
+    display: Hero Image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+    show_when:
+      hero_type: Two Column
+      show_hero_section: true
+  customize_hero:
+    type: toggle
+    display: Customize?
+    show_when:
+      show_hero_section: true
+  hero_text_color:
+    type: text
+    default: "inherit"
+    instructions: |
+      You can use any CSS color designator here (i.e. Hex, hsl, rgb, rbga, color names)
+    display: Text color (leave blank for black)
+    show_when:
+      customize_hero: true
+  background_image_overlay:
+    type: toggle
+    display: Overlay the Background Image?
+    show_when:
+      customize_hero: true
+  background_image_overlay_type:
+    type: select
+    display: What type of overlay?
+    options:
+      Black: Black
+      White: White
+      Other: Other
+    show_when:
+      background_image_overlay: true
+      customize_hero: true
+    default: Black
+  overlay_color:
+    type: text
+    display: What color to overlay?
+    instructions: |
+      Use CSS rgb values.
+      i.e. `0,0,0` for black
+      See [here](https://www.w3schools.com/colors/colors_rgb.asp) for more info.
+    default: 0,0,0
+    show_when:
+      background_image_overlay_type: Other
+  overlay_opacity:
+    type: text
+    display: Overlay Opacity
+    instructions: |
+      Use a decimal number between .0 and 1 with .0 being completely clear and 1.0 being completely opaque
+    default: .8
+    show_when:
+      background_image_overlay: true
+      customize_hero: true
+  customize_buttons:
+    type: toggle
+    display: Customize buttons?
+    show_when:
+      customize_hero: true
+  hero_button_background:
+    type: text
+    default: "inherit"
+    instructions: |
+      You can use any CSS color designator here (i.e. Hex, hsl, rgb, rbga, color names)
+    display: Button background color (leave blank for black)
+    show_when:
+      customize_buttons: true
+      customize_hero: true
+  hero_button_text:
+    type: text
+    default: "white"
+    instructions: |
+      You can use any CSS color designator here (i.e. Hex, hsl, rgb, rbga, color names)
+    display: Button text color (leave blank for white)
+    show_when:
+      customize_buttons: true
+      customize_hero: true
+
+
+

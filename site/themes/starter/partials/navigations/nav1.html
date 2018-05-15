@@ -9,7 +9,7 @@
             </a>
             <ul>
                     {{ nav from="/" max_depth="2" menu_position:is="Left"}}
-                        <li><a href="{{url}}">{{title}}</a>
+                        <li><a href="{{url}}">{{title}} </a>
                             {{if children }}
                             <ul>{{ *recursive children* }}</ul>
                             {{/if}}

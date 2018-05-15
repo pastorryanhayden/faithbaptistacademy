@@ -161,7 +161,7 @@ fields:
         show_latest_posts: true
   page_options:
     type: section
-    display: Menu & Footer Options
+    display: Menu Option
   menu_position:
     display: Position in menu
     type: radio

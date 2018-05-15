@@ -3,6 +3,7 @@ taxonomies:
 hide: true
 title: Team Member
 create_title: Team Member
+template: team_members
 fields:
   title:
     type: text

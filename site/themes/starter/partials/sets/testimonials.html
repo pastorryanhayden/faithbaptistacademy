@@ -1,0 +1,91 @@
+{{if list_type == 1}}
+<section class="testimonials-1">
+        <h2>{{heading}}</h2>
+        <div class="testimonial-slider">
+        {{collection:testimonials}}
+        <div class="testimonial">
+            {{if testimonial_thumbnail}}
+            <img src="{{glide:testimonial_thumbnail width="150" height="150" fit="crop"}}" alt="">
+            {{/if}}
+            <div class="testimonial-content">
+            <h3>{{title}}</h3>
+            {{if testimonial_description}}
+            <h4>{{testimonial_description}}</h4>
+            {{/if}}
+            {{testimonial_text}}
+            </div>
+        </div>
+        {{/collection:testimonials}}
+    </div>
+    </section>
+    <script>
+            window.addEventListener("load", function(){
+
+                //get everything with the class of tab inside of feature-tabs-tabs and assign it to the variable myTabs
+                var myTabs = document.querySelectorAll("section.testimonials-1 div.testimonial");
+
+
+
+
+                function myTabClicks(tabClickEvent) {
+                    for (var i = 0; i < myTabs.length; i++) {
+                        myTabs[i].classList.remove("showing");
+                    }
+                    var clickedTab = tabClickEvent.currentTarget;
+
+                    clickedTab.classList.add("showing");
+
+                }
+
+                //listen for tab clicks and run the myTabClicks function
+                for (i = 0; i < myTabs.length; i++) {
+                    myTabs[i].addEventListener("click", myTabClicks)
+                }
+            })
+    </script>
+{{elseif list_type == 2}}
+<section class="testimonials-2" style="background: url({{glide:default_page_image width="1440" height="600" fit="crop"}}); background-size: cover;">
+    {{collection:testimonials}}
+    <div class="testimonial">
+        {{ if testimonial_thumbnail}}
+        <img src="{{glide:testimonial_thumbnail width="150" height="150" fit="crop"}}" alt="" class="testimonial__thumbnail">
+        {{/if}}
+        <div class="testimonial__details">
+            <h2>{{title}}</h2>
+            <p class="testimonial__description">{{testimonial_description}}</p>
+            <div class="testimonial__text">{{testimonial_text}}</div>
+        </div>
+    </div>
+    {{/collection:testimonials}}
+</section>
+{{elseif list_type == 3}}
+<section class="testimonials-3">
+        <h2>{{heading}}</h2>
+        <div class="slider">
+            {{collection:testimonials}}
+            <div class="testimonial">
+                    {{testimonial_text}}
+                <div class="attrib">
+                    {{ if testimonial_thumbnail}}
+                    <img src="{{glide:testimonial_thumbnail width="50" height="50" fit="crop"}}" alt="">
+                    {{/if}}
+                    <div class="text">
+                        <p class="person">{{title}}</p>
+                        <p class="description">{{testimonial_description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/collection:testimonials}}
+        </div>
+    </section>
+    <script>
+        var slides = document.querySelectorAll('.slider .testimonial');
+        var currentSlide = 0;
+        var slideInterval = setInterval(nextSlide, 4000);
+        function nextSlide(){
+            slides[currentSlide].className = 'testimonial';
+            currentSlide = (currentSlide+1)%slides.length;
+            slides[currentSlide].className = 'testimonial showing';
+        }
+    </script>
+{{/if}}
