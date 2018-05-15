@@ -1,9 +1,9 @@
 taxonomies: false
 hide: true
 title: Testimonial
-create_title: ""
+create_title: "Testimonial"
 fields:
-  testimonial_name:
+  title:
     type: text
     display: Testimonial Name
   testimonial_description:
