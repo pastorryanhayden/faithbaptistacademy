@@ -161,7 +161,7 @@ fields:
         show_latest_posts: true
   page_options:
     type: section
-    display: Menu Option
+    display: Menu Options
   menu_position:
     display: Position in menu
     type: radio
@@ -170,5 +170,6 @@ fields:
       - Right
       - Call to Action
     default: Left
+
 
 

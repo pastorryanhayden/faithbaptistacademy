@@ -1,23 +1,11 @@
 site_name: Faith Baptist Academy
 logo: /assets/img/faith_logo.png
-navigation_style: 1
+navigation_style: 3
 facebook: '#'
 twitter: '#'
 instagram: '#'
 youtube: '#'
-footer_style: 4
-first_text_section_title: Get In Touch
-first_text_section: |
-  (217) 499-0822<br>
-  717 S 34th St<br>
-  Mattoon, IL 61938<br>
-  ryan@rowandtable.com
-second_text_section_title: Opening Hours
-second_text_section: |
-  Sunday: Closed<br>
-  Monday - Thursday: 9am-5pm<br>
-  Friday: 9am-12pm<br>
-  Saturday: Closed
+footer_style: 1
 footer_menu_1:
   - db0ae4e3-4f10-4802-bc40-0b880cbf02c7
   - 3cd2d431-699c-417c-8d57-9183cd17a6fc
