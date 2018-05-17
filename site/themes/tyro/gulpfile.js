@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-var theme = 'starter';
+var theme = 'tyro';
 
 elixir.config.assetsPath = './';
 elixir.config.publicPath = './';

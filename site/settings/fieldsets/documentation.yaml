@@ -1,0 +1,12 @@
+title: Documentation
+fields:
+  featurd_image:
+    type: assets
+    display: featured_image
+    container: main
+    folder: img
+    restrict: true
+    max_files: 1
+  text_content:
+    type: markdown
+    display: Content

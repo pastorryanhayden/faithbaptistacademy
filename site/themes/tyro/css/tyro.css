@@ -5778,6 +5778,11 @@ section.text-content figure.typl8-blockquote {
   margin-bottom: 1.02040816em;
 }
 
+section.text-content img {
+  max-width: 100%;
+  margin: 2em;
+}
+
 a {
   color: #1F8B49;
 }
@@ -5977,4 +5982,4 @@ section.text-content .videoWrapper iframe {
   height: 100%;
 }
 
-/*# sourceMappingURL=starter.css.map */
+/*# sourceMappingURL=tyro.css.map */
