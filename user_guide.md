@@ -29,24 +29,14 @@ Assets are where we store files like images and word documents.  In all likeliho
 
 ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-16%20at%208.28.40%20AM.png)
 
-<<<<<<< HEAD
 Collections are where we store and create content with a repeatable structure that are grouped together by similar characteristics.
 
 Blog posts are a good example: Your site will (hopefully) have many blog posts, but each one is going to have share common characteristics such as a title, subtitle, date, and featured image.
-=======
-Collections are where we store and create content with a repeatable structure that are grouped together by similar characteristics.
-
-Blog posts are a good example: Your site will (hopefully) have many blog posts, but each one is going to have share common characteristics such as a title, subtitle, date, and featured image.
->>>>>>> e45cae95ac74efb16267348715d7321238fe2556
 
 Other uses of collections could be:
 * Photo galleries
 * Testimonials
-<<<<<<< HEAD
 * Team/Staff entries
-=======
-* Team/Staff entries
->>>>>>> e45cae95ac74efb16267348715d7321238fe2556
 * Sermons
 * Classes
 
