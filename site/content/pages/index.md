@@ -84,7 +84,7 @@ blocks:
     heading: Latest Updates
     list_type: 1
 title: Home
-fieldset: special
+fieldset: home
 template: home
 list:
   - of
