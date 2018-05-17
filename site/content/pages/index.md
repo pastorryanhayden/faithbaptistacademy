@@ -85,6 +85,7 @@ blocks:
     list_type: 1
 title: Home
 fieldset: special
+template: home
 list:
   - of
   - things
