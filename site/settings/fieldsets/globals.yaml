@@ -168,5 +168,11 @@ fields:
     folder: img
     restrict: true
     max_files: 1
+  blog_options:
+    type: section
+    display: Blog options
+  disqus_key:
+    type: text
+    display: Disqus Key
 
 

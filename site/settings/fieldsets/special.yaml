@@ -20,5 +20,13 @@ fields:
   moab:
     type: partial
     fieldset: moab
+  menu_position:
+    display: Menu Position
+    type: radio
+    options:
+      - Left
+      - Right
+      - Call to Action
+    default: Left
 
 

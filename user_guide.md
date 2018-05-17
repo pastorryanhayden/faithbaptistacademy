@@ -1,4 +1,4 @@
-# Fbacloverdale.org User Guide
+# Site User Guide
 ## Logging In
 
 You log into your site by going to the home page and appending `/cp` (for control panel) to the URL.  This will take you to a login page where you will enter the username and password that was provided to you.
@@ -29,14 +29,24 @@ Assets are where we store files like images and word documents.  In all likeliho
 
 ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-16%20at%208.28.40%20AM.png)
 
-Collections are where we store and create content with a repeatable structure that are grouped together by similar characteristics. 
+<<<<<<< HEAD
+Collections are where we store and create content with a repeatable structure that are grouped together by similar characteristics.
 
-Blog posts are a good example: Your site will (hopefully) have many blog posts, but each one is going to have share common characteristics such as a title, subtitle, date, and featured image. 
+Blog posts are a good example: Your site will (hopefully) have many blog posts, but each one is going to have share common characteristics such as a title, subtitle, date, and featured image.
+=======
+Collections are where we store and create content with a repeatable structure that are grouped together by similar characteristics.
+
+Blog posts are a good example: Your site will (hopefully) have many blog posts, but each one is going to have share common characteristics such as a title, subtitle, date, and featured image.
+>>>>>>> e45cae95ac74efb16267348715d7321238fe2556
 
 Other uses of collections could be:
 * Photo galleries
 * Testimonials
-* Team/Staff entries 
+<<<<<<< HEAD
+* Team/Staff entries
+=======
+* Team/Staff entries
+>>>>>>> e45cae95ac74efb16267348715d7321238fe2556
 * Sermons
 * Classes
 
@@ -53,7 +63,7 @@ Pages are, well, pages.  They can be as similar or dissimilar as you choose and 
 
 ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-16%20at%208.51.55%20AM.png)
 
-At the top of every page there will be a title field and a "slug" field.  The "slug" confuses people. A slug is just your title without spaces or special characters so it can be a part of the URL.  (i.e. http://yoursite.com/your-awesome-title-here).  Because it's a part of the URL, it has to be unique and on **very rare** occasions you may have to edit it to make sure that it is unique.  99% of the time you won't touch this. 
+At the top of every page there will be a title field and a "slug" field.  The "slug" confuses people. A slug is just your title without spaces or special characters so it can be a part of the URL.  (i.e. http://yoursite.com/your-awesome-title-here).  Because it's a part of the URL, it has to be unique and on **very rare** occasions you may have to edit it to make sure that it is unique.  99% of the time you won't touch this.
 
 #### Position in Menu
 
@@ -92,13 +102,13 @@ Every basic page has the following:
 * Title - you have to call it something.
 * Slug - see above.
 * Featured Image - (Optional) upload an image for the page.  If you don't upload one, the default one (from globals) will be shown.
-* Text - see below... 
+* Text - see below...
 
 ### The Mighty *Text* Field
 
 ![](http://sitesforchurch.s3.amazonaws.com/Screen%20Shot%202018-05-16%20at%208.56.00%20AM.png)
 
-Our text field is designed to be both simple and powerful.  Just type away and you'll have a nice, distraction free place to write.  (You can even make it full screen and be *really* distraction free.)  
+Our text field is designed to be both simple and powerful.  Just type away and you'll have a nice, distraction free place to write.  (You can even make it full screen and be *really* distraction free.)
 
 But when you highlight a word or sentence, you'll be presented with a little pop-up menu where you can make things bold, italic, add a link or designate your sentence as a heading.
 
@@ -156,17 +166,11 @@ To create a blog post, click on "Collections" and then "Blog" and then "Create E
 
 A blog post is very similar to a "Basic" text page with a few added features:
 
-* **Title and Subtitle** - Our blog posts have a subtitle option as well as a title option.  The subtitle should be a one sentence description of the post. 
-* **Author** - Authors can be picked from the team members collection.  
+* **Title and Subtitle** - Our blog posts have a subtitle option as well as a title option.  The subtitle should be a one sentence description of the post.
+* **Author** - Authors can be picked from the team members collection.
 * **Feature** - If you want to feature the blog post on the blog page so that it stays at the top of the blog list, click the feature toggle.
 * **Enable Comments** - Enables Disqus comments on this post.  See below...
 
 ## Setting Up Comments
 
 Our comments are handled by Disqus.  In order for this to work, you'll need to go into the comments section and find the Disqus toggle and add your Disqus site ID.
-
-
-
-
-
-## Other Page Types

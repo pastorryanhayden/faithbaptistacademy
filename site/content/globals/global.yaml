@@ -1,6 +1,6 @@
 site_name: Faith Baptist Academy
 logo: /assets/img/faith_logo.png
-navigation_style: 1
+navigation_style: 3
 facebook: '#'
 twitter: '#'
 instagram: '#'
@@ -21,6 +21,7 @@ footer_menu_1:
   - db0ae4e3-4f10-4802-bc40-0b880cbf02c7
   - 3cd2d431-699c-417c-8d57-9183cd17a6fc
   - 60962021-f154-4cd2-a1d7-035a12b6da9e
+  - 4b8215cc-e4ad-4160-8a7d-04173943b76b
 copyright: 'Row &amp; Table Solutions - All Rights Reserved'
 blog_title: Our Blog
 blog_subtitle: Articles and Updates from Our Team
