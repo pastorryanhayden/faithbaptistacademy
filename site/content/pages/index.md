@@ -50,7 +50,7 @@ customize_buttons: true
 hero_button_background: '#1F8B49'
 hero_button_text: white
 title: Home
-fieldset: special
+fieldset: home
 template: home
 list:
   - of
